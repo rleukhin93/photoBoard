@@ -1,0 +1,24 @@
+.image-list {
+    &__tag {
+        &--item {
+            margin-right: 8px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        &--block {
+            max-width: min-content;
+            max-height: 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    &:hover &__tag--block {
+        overflow: unset;
+        z-index: 10;
+        position: relative;
+        background: #FFF;
+        max-height: unset;
+        position: absolute;
+    }
+}

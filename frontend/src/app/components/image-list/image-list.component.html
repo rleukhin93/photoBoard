@@ -1,0 +1,24 @@
+<div class="d-flex flex-wrap">
+    <div *ngFor="let photo of photoApiList">
+        <div class="mr-4 mb-4 image-list">
+            <img [src]="photo.src" alt="" height="85" width="auto"/>
+            <div class="d-flex image-list__tag--block flex-wrap">
+                <div
+                    *ngFor="let tag of photo.tags"
+                    class="image-list__tag--item"
+                >{{tag.tag.en}}</div>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let photo of photoList">
+        <div class="mr-4 mb-4 image-list">
+            <img [src]="photo.path" alt="" height="85" width="auto"/>
+            <div class="d-flex image-list__tag--block flex-wrap">
+                <div
+                    *ngFor="let tag of photo.tags"
+                    class="image-list__tag--item"
+                >{{tag.tag.en}}</div>
+            </div>
+        </div>
+    </div>
+</div>

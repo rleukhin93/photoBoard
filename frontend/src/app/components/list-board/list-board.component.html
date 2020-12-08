@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-between align-items-end flex-wrap">
+    <div class="d-flex flex-wrap">
+        <div class="d-flex mr-4 mb-2">
+            <input [(ngModel)]="photos" type="text" class="mr-4"/>
+            <button mat-raised-button color="light-primary" (click)="addPhoto()">Add</button>
+        </div>
+        <div class="mr-5 mb-2">
+            <button mat-raised-button color="light-primary-color" (click)="taggingApi()">Run Tagging API</button>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap">
+        <div class="list-board__select--w-min list-board__select--h-min mr-3 w-100 mb-2">
+            <div class="mb-3">Selectan existing board</div>
+            <mat-select
+                [(ngModel)]="currentBoard$"
+                (ngModelChange)="selectBoard($event)"
+                name="select"
+                class="list-board__select--border"
+            >
+                <mat-option value="">Select</mat-option>
+                <mat-option [value]="board._id" *ngFor="let board of boards$ | async">{{ board.name }}</mat-option>
+            </mat-select>
+        </div>
+        <button mat-raised-button class="mb-2" color="light-primary-color" (click)="createBoard()">Create new board</button>
+    </div>
+</div>

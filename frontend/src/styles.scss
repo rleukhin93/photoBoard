@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~@angular/material/theming';
+
+// global
+@import 'styles/styles-variables'; // variables
+@import 'styles/global'; // global styles for tags h1...h6, p, body, div etc...
+@import 'styles/components/forms'; // styles for form controls
+@import 'styles/components/buttons'; // styles for buttons
+
+// pages
+@import 'styles/pages/board';
+
+@include mat-core();
+
+// $candy-app-primary: mat-palette($mat-indigo);
+// $candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
+// $candy-app-warn: mat-palette($mat-red);
+
+// $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// @include angular-material-theme($candy-app-theme);
